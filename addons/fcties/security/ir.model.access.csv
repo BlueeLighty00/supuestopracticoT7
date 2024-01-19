@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+group_coordinator_alumnos,CoordinadorAlumnos,model_fcties_alumno,group_coordinator,1,1,1,1
+group_coordinator_empresa,CoordinadorEmpresa,model_fcties_empresa,group_coordinator,1,1,1,1
+group_profesor_alumnos,ProfesorAlumnos,model_fcties_alumno,group_profesor,1,1,1,1
+group_profesor_empresa,ProfesorEmpresa,model_fcties_empresa,group_profesor,1,0,0,0

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <report
+        id="escuelavela.course_report"
+        string="Informe sobre cursos"
+        model="escuelavela.curso"
+        report_type="qweb-pdf"
+        name="escuelavela.course_report_view"
+        file="escuelavela.course_report_view"/>
+
+    <template id="course_report_view">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="course">
+                <div class="page">
+                    <h1 t-field="course.title"/>
+                    <div>
+                        <strong>Duración en dias: </strong>
+                        <span t-field="course.durationDays"/>
+                    </div>
+                    <div>
+                        <strong>Duración en horas: </strong>
+                        <span t-field="course.durationHours"/>
+                    </div>
+                    <div>
+                        <strong>Precio: </strong>
+                        <span t-field="course.price"/>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

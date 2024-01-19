@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <report
+        id="escuelavela.student_report"
+        string="Informe sobre estudiantes"
+        model="escuelavela.alumno"
+        report_type="qweb-pdf"
+        name="escuelavela.student_report_view"
+        file="escuelavela.student_report_view"/>
+
+    <template id="student_report_view">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="student">
+                <div class="page">
+                    <h1 t-field="student.name"/>
+                    <div>
+                        <strong>Número de matriculación: </strong>
+                        <span t-field="student.enrolmentNum"/>
+                    </div>
+                    <div>
+                        <strong>Teléfono: </strong>
+                        <span t-field="student.phone"/>
+                    </div>
+                    <div>
+                        <strong>Correo: </strong>
+                        <span t-field="student.email"/>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
